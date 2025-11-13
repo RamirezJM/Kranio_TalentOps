@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Mi Portafolio - Desarrollador Web">
+  <meta property="og:description" content="Portafolio personal de desarrollo web. Conoce mis habilidades y proyectos enfocados en diseño atractivo y funcionalidad moderna.">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta name="description" content="Portafolio personal de desarrollo web. Conoce mis habilidades y proyectos enfocados en diseño atractivo y funcionalidad moderna.">
+  <title>Mi Portafolio - Desarrollador Web</title>
+</head>
+
+<body>
+  <header>
+    <h1>José Ramírez</h1>
+    <p>Desarrollador Web Fullstack</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre Mí</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="inicio" class="hero">
+      <h2>Bienvenido a Mi Portafolio</h2>
+      <p>Creo aplicaciones web modernas y funcionales con las últimas tecnologías.</p>
+      <a href="#contacto" class="hero__btn">Contáctame</a>
+    </section>
+
+    <section id="sobre-mi">
+      <h2>Sobre Mí</h2>
+      <article>
+        <p>Me atrae la programación por su naturaleza multifacética: un punto de encuentro entre el arte de la creación,
+          la precisión de la ciencia y el desafío constante de la resolución de problemas. Nunca dejo de estudiar,
+          siempre estoy buscando expandir mis conocimientos, explorar nuevas tecnologías y satisfacer mi curiosidad
+          infinita. Aunque soy relativamente nuevo en el mundo del desarrollo profesional, me siento como en casa. La
+          lógica, la creatividad y la búsqueda de soluciones siempre han sido parte de mí, y encuentro en la
+          programación el medio perfecto para expresarlas.</p>
+
+        <h3>Habilidades</h3>
+        <div class="habilidades-container">
+          <img
+            src="https://img.shields.io/badge/HTML5-e34f26.svg?style=plastic&logo=HTML5&logoColor=white&labelColor=e34f26"
+            alt="badge" class="badge" />
+          <img
+            src="https://img.shields.io/badge/CSS3-2965f1.svg?style=plastic&logo=data:image/png;base64,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&logoColor=white&labelColor=ffffff"
+            alt="badge" class="badge" />
+          <img
+            src="https://img.shields.io/badge/JavaScript-f7de1e.svg?style=plastic&logo=JavaScript&logoColor=f7de1e&labelColor=000000"
+            alt="badge" class="badge" />
+          <img
+            src="https://img.shields.io/badge/NodeJS-339933.svg?style=plastic&logo=Node.js&logoColor=ffffff&labelColor=339933"
+            alt="badge" class="badge" />
+          <img
+            src="https://img.shields.io/badge/ExpressJS-000000.svg?style=plastic&logo=Express&logoColor=ffffff&labelColor=333333"
+            alt="badge" class="badge" />
+          <img
+            src="https://img.shields.io/badge/Postgre_SQL-4169e1.svg?style=plastic&logo=PostgreSQL&logoColor=ffffff&labelColor=4169e1"
+            alt="badge" class="badge" />
+          <img
+            src="https://img.shields.io/badge/Bootstrap-7952b3.svg?style=plastic&logo=Bootstrap&logoColor=ffffff&labelColor=7952b3"
+            alt="badge" class="badge" />
+          <img
+            src="https://img.shields.io/badge/Tailwind_CSS-06b6d4.svg?style=plastic&logo=Tailwind CSS&logoColor=ffffff&labelColor=06b6d4"
+            alt="badge" class="badge" />
+          <img
+            src="https://img.shields.io/badge/Git-f05032.svg?style=plastic&logo=Git&logoColor=f05032&labelColor=ffffff"
+            alt="badge" class="badge" />
+          <img
+            src="https://img.shields.io/badge/Figma-ffffff.svg?style=plastic&logo=data:image/png;base64,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&logoColor=f05032&labelColor=ffffff"
+            alt="badge" class="badge" />
+          <img
+            src="https://img.shields.io/badge/React-61dafb.svg?style=plastic&logo=React&logoColor=61dafb&labelColor=ffffff"
+            alt="badge" class="badge" />
+        </div>
+      </article>
+    </section>
+
+    <section id="proyectos">
+      <h2>Mis Proyectos</h2>
+      <div class="proyectos">
+
+        <article class="proyecto">
+          <img src="assets/images/mundo-animal.jpg" alt="imagen proyecto" class="proyecto__imagen">
+
+          <h3>Mundo Animal</h3>
+          <p>Sitio web para peluquería canina.</p>
+          <p><strong>Tecnologías:</strong> HTML, CSS, Javascript</p>
+          <div class="proyecto__link">
+            <a href="https://mundo-animal.cl" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/world.svg" alt="icono mundo" class="proyecto__icono">
+            </a>
+            <a href="https://github.com/RamirezJM/MundoAnimal" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/github.svg" alt="icono github" class="proyecto__icono">
+            </a>
+          </div>
+
+        </article>
+
+        <article class="proyecto">
+          <img src="assets/images/vera-software.jpg" alt="imagen proyecto" class="proyecto__imagen">
+
+          <h3>Vera Software Solutions</h3>
+          <p>Proyecto parte de curso de formación</p>
+          <p><strong>Tecnologías:</strong> HTML, CSS, Bootstrap, Sass, Javascript</p>
+          <div class="proyecto__link">
+            <a href="https://ramirezjm.github.io/Vera_Software_Solutions/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/world.svg" alt="icono mundo" class="proyecto__icono">
+            </a>
+            <a href="https://github.com/RamirezJM/Vera_Software_Solutions" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/github.svg" alt="icono github" class="proyecto__icono">
+            </a>
+          </div>
+
+        </article>
+
+        <article class="proyecto">
+          <img src="assets/images/little-lemon.jpg" alt="imagen proyecto" class="proyecto__imagen">
+
+          <h3>Little Lemon</h3>
+          <p>Proyecto parte de curso de formación</p>
+          <p><strong>Tecnologías:</strong> HTML, CSS, Javascript, React</p>
+          <div class="proyecto__link">
+            <a href="https://ramirezjm.github.io/Little_Lemon_Meta_Capstone/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/world.svg" alt="icono mundo" class="proyecto__icono">
+            </a>
+            <a href="https://github.com/RamirezJM/Little_Lemon_Meta_Capstone" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/github.svg" alt="icono github" class="proyecto__icono">
+            </a>
+          </div>
+
+        </article>
+
+        <article class="proyecto">
+          <img src="assets/images/lazaro-igor.jpg" alt="imagen proyecto" class="proyecto__imagen">
+
+          <h3>Lázaro Igor</h3>
+          <p>Sitio web para artesano en madera.</p>
+          <p><strong>Tecnologías:</strong> HTML, CSS, Javascript</p>
+          <div class="proyecto__link">
+            <a href="https://lazaroigortortel.cl" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/world.svg" alt="icono mundo" class="proyecto__icono">
+            </a>
+            <a href="https://github.com/RamirezJM/Lazaro_Igor" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/github.svg" alt="icono github" class="proyecto__icono">
+            </a>
+          </div>
+
+        </article>
+
+        <article class="proyecto">
+          <img src="assets/images/yavin-office.jpg" alt="imagen proyecto" class="proyecto__imagen">
+
+          <h3>Yavin Office Design</h3>
+          <p>Proyecto parte de curso de formación</p>
+          <p><strong>Tecnologías:</strong> HTML, CSS, Bootstrap, Sass, Javascript</p>
+          <div class="proyecto__link">
+            <a href="https://ramirezjm.github.io/Yavin_Office_Design/index.html" target="_blank"
+              rel="noopener noreferrer">
+              <img src="assets/images/world.svg" alt="icono mundo" class="proyecto__icono">
+            </a>
+            <a href="https://github.com/RamirezJM/Yavin_Office_Design" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/github.svg" alt="icono github" class="proyecto__icono">
+            </a>
+          </div>
+
+        </article>
+
+        <article class="proyecto">
+          <img src="assets/images/guess-word.jpg" alt="imagen proyecto" class="proyecto__imagen">
+          <h3>Guess The Word</h3>
+          <p>Proyecto parte de curso de formación</p>
+          <p><strong>Tecnologías:</strong> HTML, CSS, Javascript, React</p>
+          <div class="proyecto__link">
+            <a href="https://ramirezjm.github.io/React_Guess_The_Word/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/world.svg" alt="icono mundo" class="proyecto__icono">
+            </a>
+            <a href="https://github.com/RamirezJM/React_Guess_The_Word" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/github.svg" alt="icono github" class="proyecto__icono">
+            </a>
+          </div>
+        </article>
+
+
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form>
+
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required minlength="2" placeholder="Juan Pérez">
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required placeholder="tu_email@correo.com">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678" minlength="8" maxlength="15" pattern="[0-9+\s()-]{8,15}">
+
+        <label for="asunto">Asunto:</label>
+        <select id="asunto" name="asunto" required>
+          <option value="">Seleccionar...</option>
+          <option value="proyecto">Consulta sobre proyecto</option>
+          <option value="colaboracion">Propuesta de colaboración</option>
+          <option value="empleo">Oportunidad laboral</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required minlength="10" placeholder="Me gustaría que habláramos de..."></textarea>
+
+        <label>
+          <input type="checkbox" name="newsletter" value="si">
+          Suscribirme al newsletter
+          
+        </label>
+
+        <button type="submit" class="form__btn">Enviar Mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 José Ramírez. Todos los derechos reservados.</p>
+    <p>
+      <a href="https://github.com/RamirezJM" target="_blank">
+        <img src="assets/images/github.svg" alt="github icono" class="social__link">
+      </a> 
+      <a href="https://www.linkedin.com/in/jose-ramirez-ibarra/" target="_blank">
+        <img src="assets/images/linkedin.svg" alt="linkedin icono" class="social__link">
+      </a>
+    </p>
+  </footer>
+
+</body>
+
+</html>
