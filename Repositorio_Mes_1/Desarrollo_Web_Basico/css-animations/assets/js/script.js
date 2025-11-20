@@ -9,7 +9,6 @@ const content = document.getElementById("content");
 // Toggle sidebar
 toggleSidebar.addEventListener("click", () => {
   sidebar.classList.toggle("expanded");
-  /* sidebar.classList.toggle("expanded"); */
 });
 
 closeSidebar.addEventListener("click", () => {
@@ -19,15 +18,15 @@ closeSidebar.addEventListener("click", () => {
 // Toggle theme
 toggleTheme.addEventListener("click", () => {
   document.body.classList.toggle("dark");
-  if(document.body.classList.contains('dark')){
+  if (document.body.classList.contains('dark')) {
     toggleTheme.textContent = '🌞'
-  }else{
+  } else {
     toggleTheme.textContent = '🌚'
   }
 });
 
-// Fake loading
+// loading
 setTimeout(() => {
   loader.classList.add("hidden");
   content.classList.remove("hidden");
-}, 1500);
+}, 2000);
