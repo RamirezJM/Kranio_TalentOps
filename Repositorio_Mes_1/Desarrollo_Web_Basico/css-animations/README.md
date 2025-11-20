@@ -1,7 +1,7 @@
 ## 'Repositorio CSS Avanzado y Animaciones - Día 3'
 
 <div>
-  <img src="./assets/images/screenshot.jpg" width=500>
+  <img src="./assets/images/screenshot1.jpg" width=500>
 </div>
 
 <div>
