@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <button id="toggleSidebar" class="menu-btn">☰</button>
+    <h1>Dashboard</h1>
+    <button id="toggleTheme" class="theme-btn">🌚</button>
+  </header>
+
+  <main>
+
+    <!-- loading -->
+
+    <div class="loader" id="loader"></div>
+
+    <section class="stats hidden" id="content">
+
+      <div class="card">
+        <h3 class="card__title">Visitas mensuales</h3>
+        <div class="chart-bars">
+          <div class="bar" style="height: 55%"></div>
+          <div class="bar" style="height: 75%"></div>
+          <div class="bar" style="height: 40%"></div>
+          <div class="bar" style="height: 90%"></div>
+          <div class="bar" style="height: 60%"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="card__title">Conversiones</h3>
+        <div class="donut"></div>
+      </div>
+
+
+      <div class="card">
+        <h3 class="card__title">Usuarios activos</h3>
+        <p class="card__data">1280</p>
+      </div>
+
+      <div class="card">
+        <h3 class="card__title">Ingresos</h3>
+        <p class="card__data">4.230 USD</p>
+      </div>
+
+    </section>
+
+    <section class="grafico">
+      <div class="card chart-line">
+        <h3>Actividad semanal</h3>
+        <div class="line-graph"></div>
+      </div>
+    </section>
+
+    <section class="circular">
+
+      <div class="card card__donut">
+        <h3>Ventas por categoría</h3>
+
+        <div class="donut-chart ventas"></div>
+
+        <ul class="donut-legend">
+          <li><span class="color cat-a"></span> Accesorios — 45%</li>
+          <li><span class="color cat-b"></span> Comida — 30%</li>
+          <li><span class="color cat-c"></span> Juguetes — 25%</li>
+        </ul>
+
+      </div>
+
+      <div class="card card__donut">
+        <h3>Usuarios activos</h3>
+
+        <div class="donut-chart usuarios" style="--p:68"></div>
+
+        <p class="card__data">68%</p>
+
+        <p class="total">Usuarios este mes: <strong>3.482</strong></p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <button class="close-sidebar">✕</button>
+    <h2 class="sidebar__title">Menu</h2>
+    <div class="sidebar__user">
+      <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="user image" class="sidebar__image">
+      <p>Admin</p>
+    </div>
+    <nav>
+      <a href="#" class="nav-item active">Dashboard</a>
+      <a href="#" class="nav-item">Usuarios</a>
+      <a href="#" class="nav-item">Ventas</a>
+      <a href="#" class="nav-item">Configuración</a>
+    </nav>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

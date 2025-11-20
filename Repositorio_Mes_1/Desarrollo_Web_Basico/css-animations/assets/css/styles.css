@@ -1,0 +1,395 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f5f5f5;
+  --surface: #ffffff;
+  --surface-2: rgba(0,0,0,0.1);
+  --text: #222;
+  --accent: #4f7cff;
+  --accent2: #0020A3;
+  --accent3: #B75D69;
+  --accent4: #E6C7CB;
+  --border: #e0e0e0;
+}
+
+body.dark {
+  --bg: #1a1a1a;
+  --surface: #222;
+  --surface-2: rgba(255,255,255,0.1);
+  --text: #eee;
+  --accent: #7ba2ff;
+  --border: #333;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background .3s, color .3s;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.menu-btn, .theme-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text); 
+  transition: all .2s;
+}
+
+.menu-btn:hover, .theme-btn:hover {
+  transform: scale(1.1);
+}
+
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 1em;
+  transform: translateX(-100%);
+  transition: transform .3s;
+}
+
+.sidebar__user{
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.sidebar__image{
+  border-radius: 50%;
+  width: 100px;
+}
+
+.close-sidebar {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text);
+  padding: 1em;
+  cursor: pointer;
+}
+
+.nav-item {
+  display: block;
+  margin-block: 1em;
+  padding: .5em;
+  color: var(--text);
+  text-decoration: none;
+  transition: background .2s;
+}
+
+.nav-item:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.nav-item.active {
+  background: var(--accent);
+  color: white;
+}
+
+.sidebar.expanded{
+  transform: translateX(0);
+}
+
+
+.loader {
+  width: 32px;
+  height: 32px;
+  border: 4px solid transparent;
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  margin: 40px auto;
+  animation: spin .7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+.stats {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5em;
+}
+
+.hidden {
+  display: none;
+}
+
+.card {
+  background: var(--surface);
+  padding: 1em;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.card__title, .card__data{
+  text-align: center;
+}
+.card__data{
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+
+.chart-bars {
+  height: 160px;
+  display: flex;
+  gap: .5em;
+  align-items: flex-end;
+}
+
+.bar {
+  flex: 1;
+  background: linear-gradient(to top, var(--accent), var(--accent2));
+  border-radius: 4px;
+}
+
+
+.donut {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 10px auto;
+  background: conic-gradient(
+    var(--accent) 0 70%,
+    var(--surface) 70% 100%
+  );
+}
+
+.grafico{
+  width: 90%;
+  margin: 2em auto;
+}
+
+.card.chart-line {
+  padding: 1em;
+  background: var(--surface);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.chart-line h3 {
+  margin-bottom: 16px;
+}
+
+.line-graph {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to top, var(--surface-2), var(--surface));
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Líneas simuladas */
+.line-graph::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 140%;
+  height: 100%;
+
+  /* Cambia los valores de clip-path para cambiar la forma */
+  clip-path: polygon(
+    0% 70%, 
+    15% 50%,  
+    30% 60%, 
+    45% 40%, 
+    60% 45%, 
+    75% 25%,  
+    90% 35%, 
+    100% 20%, 
+    100% 100%, 
+    0% 100%
+  );
+
+  background: linear-gradient(var(--accent3), var(--accent4));
+  opacity: 0.8;
+}
+
+.circular{
+  width: 90%;
+  margin: 2em auto;
+  padding: 1em;
+  background: var(--surface);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 1em;
+}
+
+.card.radial-card {
+  padding: 1em;
+  background: var(--surface);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+
+.radial-chart {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--accent) calc(var(--p) * 1%),
+    var(--surface-2) 0
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radial-chart.large {
+  --size: 150px;
+}
+
+.percent {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* .card.donut-card {
+  padding: 20px;
+  background: var(--surface);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+} */
+.card__donut{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+/* Tamaño del donut */
+.donut-chart {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+}
+
+/* Donut multicolor */
+.donut-chart.ventas {
+  background: conic-gradient(
+    var(--accent) 0 45%,
+    var(--accent2) 45% 75%,
+    var(--accent3) 75% 100%
+  );
+  position: relative;
+}
+
+/* Círculo interior para formar la dona */
+.donut-chart.ventas::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px; height: 90px;
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
+}
+
+
+.donut-legend {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  font-size: .9rem;
+}
+
+.donut-legend li {
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.donut-legend .color {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.color.cat-a { background: var(--accent); }
+.color.cat-b { background: var(--accent2); }
+.color.cat-c { background: var(--accent3); }
+
+
+
+/* Donut de un solo valor */
+.donut-chart.usuarios {
+  --size: 170px;
+  width: var(--size);
+  height: var(--size);
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  position: relative;
+
+  background: conic-gradient(
+    var(--accent) calc(var(--p) * 1%),
+    var(--surface-2) 0
+  );
+}
+
+
+.donut-chart.usuarios::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(var(--size) * 0.55);
+  height: calc(var(--size) * 0.55);
+  background: var(--surface);
+  border-radius: 50%;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.15);
+}
+
+
+@media (min-width:750px){
+  header{
+    padding: 1em 3em;
+  }
+
+  .circular{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
